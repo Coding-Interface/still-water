@@ -1,0 +1,102 @@
+<title>Still Water</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="theme-color" content="#0c1620">
+<meta name="description" content="Stress-release games, calm play and guided breathing for kids and grown-ups.">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Still Water">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Figtree:wght@400;500;600&family=Fredoka:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/style.css">
+
+<aside class="side side-left" aria-hidden="true">
+  <svg class="side-lotus" viewBox="-56 -50 112 64">
+    <ellipse cx="0" cy="6" rx="52" ry="8" fill="#3f7a5f"/>
+    <g fill="#c56f8a">
+      <ellipse cx="0" cy="-20" rx="10" ry="23" transform="rotate(-72)"/>
+      <ellipse cx="0" cy="-20" rx="10" ry="23" transform="rotate(72)"/>
+      <ellipse cx="0" cy="-21" rx="11" ry="24" transform="rotate(-42)"/>
+      <ellipse cx="0" cy="-21" rx="11" ry="24" transform="rotate(42)"/>
+    </g>
+    <g fill="#e8a5b5">
+      <ellipse cx="0" cy="-21" rx="11" ry="24" transform="rotate(-18)"/>
+      <ellipse cx="0" cy="-21" rx="11" ry="24" transform="rotate(18)"/>
+    </g>
+    <ellipse cx="0" cy="-19" rx="9" ry="21" fill="#f7d6de"/>
+  </svg>
+  <h2 class="side-title">Still Water</h2>
+  <p class="side-lede">Let off steam. Find your calm.</p>
+  <ul class="side-list">
+    <li><b>Games</b> to smash, slice, shatter and burn stress</li>
+    <li><b>Unwind</b> with slow play that has no goal</li>
+    <li><b>Breathe</b> with short guided practices</li>
+  </ul>
+</aside>
+
+<aside class="side side-right" aria-hidden="true">
+  <div class="side-keys">
+    <p class="side-eyebrow">Keyboard</p>
+    <dl class="keys">
+      <div><dt><kbd>Esc</kbd></dt><dd>Back to home</dd></div>
+      <div><dt><kbd>M</kbd></dt><dd>Sound on or off</dd></div>
+      <div><dt><kbd>F</kbd></dt><dd>Full screen</dd></div>
+      <div><dt><kbd>←</kbd> <kbd>→</kbd></dt><dd>Switch tabs</dd></div>
+      <div><dt><kbd>Space</kbd></dt><dd>Begin, launch, drop</dd></div>
+    </dl>
+  </div>
+</aside>
+
+<main id="stage" aria-label="Still Water: stress-release games and calm play for kids and grown-ups"></main>
+
+<div class="loader" id="loader" role="status" aria-live="polite">
+  <div class="loader-inner">
+    <div class="breath">
+      <div class="breath-ring r2"></div>
+      <div class="breath-ring"></div>
+      <svg class="lotus" viewBox="-56 -50 112 64" aria-hidden="true">
+        <ellipse cx="0" cy="6" rx="52" ry="8" fill="#3f7a5f"/>
+        <g fill="#c56f8a">
+          <ellipse cx="0" cy="-20" rx="10" ry="23" transform="rotate(-72)"/>
+          <ellipse cx="0" cy="-20" rx="10" ry="23" transform="rotate(72)"/>
+          <ellipse cx="0" cy="-21" rx="11" ry="24" transform="rotate(-42)"/>
+          <ellipse cx="0" cy="-21" rx="11" ry="24" transform="rotate(42)"/>
+        </g>
+        <g fill="#e8a5b5">
+          <ellipse cx="0" cy="-21" rx="11" ry="24" transform="rotate(-18)"/>
+          <ellipse cx="0" cy="-21" rx="11" ry="24" transform="rotate(18)"/>
+        </g>
+        <ellipse cx="0" cy="-19" rx="9" ry="21" fill="#f7d6de"/>
+      </svg>
+    </div>
+    <p class="cue"><span class="in">Breathe in</span><span class="out">Breathe out</span></p>
+    <h1 class="loader-title">Still Water</h1>
+    <div class="bar"><div class="bar-fill" id="loader-bar"></div></div>
+    <p class="tip" id="loader-tip">Loading calm…</p>
+    <div class="loader-error" id="loader-error" hidden>
+      <p>The game could not finish loading. Check your connection, then try again.</p>
+      <button type="button" id="loader-retry" class="btn btn-primary">Try again</button>
+    </div>
+  </div>
+</div>
+
+<div class="fs-overlay" id="fs-overlay" role="dialog" aria-modal="true" aria-labelledby="fs-title" hidden>
+  <div class="fs-card">
+    <div class="fs-icon" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+    <h2 class="fs-title" id="fs-title">Play full screen</h2>
+    <p class="fs-text" id="fs-text">Hide the browser for a bigger, calmer view.</p>
+    <p class="fs-note" id="fs-note" hidden></p>
+    <div class="fs-actions">
+      <button type="button" class="btn btn-primary" id="fs-go">Go full screen</button>
+      <button type="button" class="btn btn-ghost" id="fs-skip">Stay in this window</button>
+    </div>
+  </div>
+</div>
+
+<noscript><p class="noscript">Still Water needs JavaScript to run.</p></noscript>
+
+<script src="js/boot/BootLoader.js"></script>
